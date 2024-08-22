@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="calc" id="calc">
+        <div class="screen">
+            <div class="name">Calculator</div>
+            <div class="mainscreen" onClick="this.contentEditable='true';" id="mainscreen">
+                0
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="insidebutton">
+                <div class="buttonbox" onclick="clearScreen()">C</div>
+                <div class="buttonbox" onclick="appendNumber('7')">7</div>
+                <div class="buttonbox" onclick="appendNumber('6')">6</div>
+                <div class="buttonbox" onclick="appendNumber('1')">1</div>
+                <div class="buttonbox" onclick="appendNumber('00')">00</div>
+            </div>
+            <div class="insidebutton">
+                <div class="buttonbox" onclick="toggleSign()">+/-</div>
+                <div class="buttonbox" onclick="appendNumber('8')">8</div>
+                <div class="buttonbox" onclick="appendNumber('5')">5</div>
+                <div class="buttonbox" onclick="appendNumber('2')">2</div>
+                <div class="buttonbox" onclick="appendNumber('0')">0</div>
+            </div>
+            <div class="insidebutton">
+                <div class="buttonbox" onclick="appendOperator('%')">%</div>
+                <div class="buttonbox" onclick="appendNumber('9')">9</div>
+                <div class="buttonbox" onclick="appendNumber('4')">4</div>
+                <div class="buttonbox" onclick="appendNumber('3')">3</div>
+                <div class="buttonbox" onclick="appendDot()">.</div>
+            </div>
+            <div class="insidebutton">
+                <div class="buttonbox ops" onclick="appendOperator('/')">/</div>
+                <div class="buttonbox ops" onclick="appendOperator('*')">x</div>
+                <div class="buttonbox ops" onclick="appendOperator('-')">-</div>
+                <div class="ops buttonbox" onclick="appendOperator('+')">+</div>
+                <div id="equal" class="buttonbox ops" onclick="calculateResult()"><b style="color: black;">=</b></div>
+            </div>
+        </div>
+    </div>
+    <div class="toggle">
+        <input type="checkbox" id="btn" onclick="toggleTheme()">
+        <label for="btn">
+          <span class="thumb"></span>
+        </label>
+        <div class="light"></div>
+    </div>
+    <footer>
+        <a class="footer" href="https://aryanpandey.site">www.aryanpandey.site</a>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
